@@ -69,12 +69,17 @@ public class Student {
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
         private int id;
-       // @Column(name="student_id")
+        @Column(name="student_id")
         private int studentId;
+        @Column(name="student_name")
         private String  studentName;
+        @Column(name="student_phone_number")
         private long  studentPhoneNumber;
+        @Column(name="student_email")
         private String  studentEmail;
+        @Column(name="student_password")
         private String  studentPassword;
+        @Column(name="student_address")
         private String  studentAddress;
 
 
