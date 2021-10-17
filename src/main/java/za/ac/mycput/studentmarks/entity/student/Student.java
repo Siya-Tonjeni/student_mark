@@ -11,6 +11,7 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="student_id")
     private int studentId;
+    private long  studentNumber;
     private String  studentName;
     private long  studentPhoneNumber;
     private String  studentEmail;
@@ -32,6 +33,9 @@ public class Student {
 
     public int getStudentId() {
         return studentId;
+    }
+    public long getStudentNumber() {
+        return studentNumber;
     }
 
     public String getStudentName() {
@@ -68,9 +72,10 @@ public class Student {
     public static class Builder{
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
-        private int id;
         @Column(name="student_id")
         private int studentId;
+        @Column(name="student_number")
+        private long  studentNumber;
         @Column(name="student_name")
         private String  studentName;
         @Column(name="student_phone_number")
@@ -86,6 +91,10 @@ public class Student {
 
         public Builder setStudentId(int studentId){
             this.studentId= studentId;
+            return this;
+        }
+        public Builder setStudentNumber(long studentNumber){
+            this.studentNumber= studentNumber;
             return this;
         }
 
@@ -112,6 +121,7 @@ public class Student {
         public Builder copy(Student student){
 
             this.studentId=student.studentId;
+            this.studentNumber=student.studentNumber;
             this.studentName=student.studentName;
             this.studentPhoneNumber=student.studentPhoneNumber;
             this.studentEmail=student.studentEmail;
