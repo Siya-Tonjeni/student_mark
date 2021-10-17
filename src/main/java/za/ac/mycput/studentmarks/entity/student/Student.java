@@ -1,8 +1,10 @@
 package za.ac.mycput.studentmarks.entity.student;
-
-
-
 import javax.persistence.*;
+/*
+ * author:marco Mulondayi
+ * 219049505
+ *
+ */
 
 @Entity
 @Table(name="student")
